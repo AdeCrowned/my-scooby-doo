@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>My Scooby Doo ❤️</title>
+    <style>
+
+    body {
+        background-color: pink;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    button {
+        background-color: #ff4d88;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #e6005c;
+    }
+
+    .secret-message {
+        display: none;
+animation: fadeIn 1s ease;
+        background-color: #fff0f5;
+        color: #c2185b;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 25px auto;
+        max-width: 350px;
+        font-size: 20px;
+    }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp 8s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    font-size: 20px;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    font-size: 35px;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 40%;
+    font-size: 16px;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 55%;
+    font-size: 30px;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 70%;
+    font-size: 24px;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 82%;
+    font-size: 40px;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(7) {
+    left: 92%;
+    font-size: 18px;
+    animation-delay: 2.5s;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="hearts">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💖</span>
+    <span>❤️</span>
+    <span>💘</span>
+    <span>💓</span>
+</div>
+<h1>Hey, My Scooby Doo! 🐶❤️</h1>
+<p>I have a little surprise for you...</p>
+<button>Open your surprise 💌</button>
+<p id="secret-message" class="secret-message">
+    You are my favourite person, Aya Mi. ❤️
+</p>
+<script>
+    const button = document.querySelector("button");
+    const message = document.getElementById("secret-message");
+
+    button.addEventListener("click", function() {
+        message.style.display = "block";
+    });
+</script>
+</body>
+</html>
